@@ -54,6 +54,7 @@ private  static  String url="";
         HttpServletRequest request= ((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest();
         String url = request.getRequestURL().toString().substring(request.getRequestURL().toString().lastIndexOf("/"));
         System.err.println(url+"刘风奇");
+
         if ("/selectUser".equals(url)&&url!=null) {
 
             User req = (User) request.getSession().getAttribute("user");
@@ -66,6 +67,7 @@ private  static  String url="";
             user.setZtid(ret.toString());
             mongoTemplate.save(user);
         }else{
+
             System.err.println("sfasfafadfdsknfadkl"+ret.toString());
              Aop aop=new Aop();
           //  List <News>list=(List<News>)ret;

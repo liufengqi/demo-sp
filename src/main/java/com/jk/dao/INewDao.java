@@ -26,10 +26,7 @@ public interface INewDao {
     @Select("select * from news where newsid=#{newsid}")
     News queryXinfo(Integer newsid);
     @Select("select * from t_user where username=#{username}")
-    List<User> queryname(String username)
+    List<User> queryname(String username);
 
 
-    ;
-
-    
 }
