@@ -28,6 +28,7 @@ public class NewsServiceImpl implements INewsService {
 
     @Override
     public void addxinwen(News news){
+
         iNewDao.addxinwen(news);
     }
 

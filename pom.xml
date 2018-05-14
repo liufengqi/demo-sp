@@ -201,7 +201,6 @@
 			<version>1.16.12</version>
 		</dependency>
 
-
 		<!--mongodb 开始 -->
 		<!--核心模块，包括自动配置支持、日志和YAML-->
 		<dependency>
@@ -225,7 +224,7 @@
 		<!--redis-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-redis</artifactId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
 		</dependency>
 
 

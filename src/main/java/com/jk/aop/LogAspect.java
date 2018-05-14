@@ -24,7 +24,6 @@ public class LogAspect {
 
 private  static  String url="";
 
-
     @Autowired
     private MongoTemplate mongoTemplate;
 
@@ -110,9 +109,5 @@ private  static  String url="";
               /*  news.setContent(list.get(i).getContent());
                 news.setPublishtime(list.get(i).getPublishtime());*/
            mongoTemplate.save(yichang);
-
-
     }
-
-
 }

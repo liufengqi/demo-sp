@@ -6,16 +6,9 @@ import com.jk.model.News;
 import com.jk.model.User;
 import com.jk.service.INewsService;
 import com.mongodb.*;
-import freemarker.template.Configuration;
-import freemarker.template.Template;
-import freemarker.template.TemplateException;
 import org.apache.catalina.servlet4preview.http.HttpServletRequest;
-import org.apache.poi.xwpf.usermodel.*;
-import org.openxmlformats.schemas.wordprocessingml.x2006.main.CTShd;
-import org.openxmlformats.schemas.wordprocessingml.x2006.main.CTTblWidth;
-import org.openxmlformats.schemas.wordprocessingml.x2006.main.STShd;
-import org.openxmlformats.schemas.wordprocessingml.x2006.main.STTblWidth;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -32,6 +25,9 @@ public class NewsController {
 
     @Autowired
     private   INewsService iNewsService;
+
+   /* @Autowired
+    private RedisTemplate redisTemplate;*/
 
     @RequestMapping(value="queryNews")
     @ResponseBody
@@ -69,6 +65,7 @@ public class NewsController {
     @ResponseBody
     public String selectUser(User user,HttpServletRequest request){
         System.err.println(user);
+        /*redisTemplate.opsForValue().set("data",user);*/
         String falg = "";
         falg = iNewsService.selectUser(user,request);
         return falg;
