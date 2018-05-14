@@ -4,6 +4,7 @@ public class RedisController {
 
     public static void main(){
         System.err.println("aaaaaa"+"bbbbbbbbbbbb");
+        System.err.println("cccccc");
     }
 
 }
